@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h2>Add User</h2>
+<form method="post" action="/Users/add">
+    <dl>
+		<p>
+			<input name="inputName" value="" type="text" placeholder="Name" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputApellido1" value="" type="text" placeholder="Primer Apellido" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputApellido2" value="" type="text" placeholder="Segundo Apellido" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputMatricula" value="" type="text" placeholder="Matricula" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputEmail" value="" type="text" placeholder="Email" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+<form method="get" action="/Users">
+	<p>
+		<input type="submit" value="Voler al menú Administrar usuarios">
+	</p>
+</form>
+{%endblock%}

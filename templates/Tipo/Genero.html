@@ -1,0 +1,22 @@
+{% extends 'base/base2.html' %}
+{% block content %}
+<main>
+<div class="container-fluid">
+	<h1 class="mt-4">Género literario</h1>
+	<div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" href="{{ url_for('.add_tipo_view') }}"> Agregar Género</a></div>
+	<div class="row">
+	</div>
+	</div>
+</main>
+<main>                    
+	<h1 class="mt-4"></h1>
+	<div class="card mb-4">
+		<div class="card-header"><i class="fas fa-table mr-1"></i>Usuarios/Personas</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				{{table}}
+			</div>
+		</div>
+	</div>
+</main>
+{%endblock%}

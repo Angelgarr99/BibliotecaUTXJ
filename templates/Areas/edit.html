@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div id="layoutAuthentication">
+	<div id="layoutAuthentication_content">
+		<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-7">
+						<div class="card shadow-lg border-0 rounded-lg mt-5">
+							<div class="card-header"><h3 class="text-center font-weight-light my-4">Editar Area</h3></div>
+							<div class="card-body">
+								<form method="post" action="/Area/update"">
+									<div class="form-group">
+										<label class="small mb-1">Nombre del Área</label>
+										<input class="form-control py-4" name="inputNombre" value="{{ row['Area'] }}" type="text" placeholder="Nombre" autocomplete="off" required>
+									</div>
+									<div class="form-group mt-4 mb-0">
+										<input name="id" value="{{ row['ID'] }}" type="hidden">
+										<input class="btn btn-primary col-md-9" type="submit" value="Guardar Cambios">
+										<a class="col-md-2"></a>
+										<a class="btn btn-danger col-md-2 align-rigth" href="../../Area"> Cancelar </a>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer text-center">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+
+	{%endblock%}

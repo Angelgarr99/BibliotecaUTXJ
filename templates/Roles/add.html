@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div id="layoutAuthentication">
+	<div id="layoutAuthentication_content">
+		<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-7">
+						<div class="card shadow-lg border-0 rounded-lg mt-5">
+							<div class="card-header"><h3 class="text-center font-weight-light my-4">Agregar Rol</h3></div>
+							<div class="card-body">
+								<form method="post" action="/Roles/add">
+									<div class="form-group"><label class="small mb-1">Nombre del Rol</label>
+									<input class="form-control py-4" name="inputNombre" value="" type="text" placeholder="Nombre" autocomplete="off" required>
+								</div>
+								{% for i in range(0,len)%}
+								<div class="form-check form-check-inline">
+									<input name="inputChec" class="form-check-input" type="checkbox" id="inlineCheckbox{{ rows[i]['Id'] }}" value="{{ rows[i]['Id'] }}">
+									<label class="form-check-label" for="inlineCheckbox{{ rows[i]['Id'] }}">{{ rows[i]['Nombre'] }}</label>
+								  </div>
+								  {% endfor %}
+
+									<div class="form-group mt-4 mb-0">
+										<input class="btn btn-primary col-lg-9" type="submit" value="Agregar">
+										<a class="col-md-2"></a>
+										<a class="btn btn-danger col-md-2 align-rigth" href="../../Roles"> Cancelar </a>
+									</div>
+									
+								</form>
+							</div>
+							<div class="card-footer text-center">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+{%endblock%}

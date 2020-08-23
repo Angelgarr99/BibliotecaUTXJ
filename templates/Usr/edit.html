@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h2>Editar Usuario</h2>
+<form method="post" action="/Users/update">
+    <dl>
+		<p>
+			<input name="inputName" value="{{ row['Nombre'] }}" type="text" placeholder="Name" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputApellido1" value="{{ row['apellido1'] }}" type="text" placeholder="Primer Apellido" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputApellido2" value="{{ row['apellido2'] }}" type="text" placeholder="Segundo Apellido" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputMatricula" value="{{ row['matricula'] }}" type="text" placeholder="Matricula" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputEmail" value="{{ row['Email'] }}" type="text" placeholder="Email" autocomplete="off" required>
+		</p>
+		<p>
+			<input name="inputPassword" value="" type="password" placeholder="Password" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+		<input name="id" value="{{ row['Id'] }}" type="hidden">
+		<input type="submit" value="Submit">
+	</p>
+</form>
+<form method="get" action="/Users">
+	<p>
+		<input type="submit" value="Voler al menú Administrar usuarios">
+	</p>
+</form>
+{%endblock%}

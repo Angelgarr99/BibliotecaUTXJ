@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div id="layoutAuthentication">
+	<div id="layoutAuthentication_content">
+		<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-7">
+						<div class="card shadow-lg border-0 rounded-lg mt-5">
+							<div class="card-header"><h3 class="text-center font-weight-light my-4">Agregar Area</h3></div>
+							<div class="card-body">
+								<form method="post"  action="/TPrestamo/add">
+									<div class="form-group">
+										<label class="small mb-1">Tipo de Prestamo</label>
+										<input class="form-control py-4" name="inputTipo" value="" type="text" placeholder="Tipo de Prestamo" autocomplete="off" required>
+									</div>
+									<div class="form-group">
+										<label class="small mb-1">Descripción</label>
+										<input class="form-control py-4" name="inputDescr" type="text" placeholder="Descripción" autocomplete="off" required>
+									</div>
+									<div class="form-group mt-4 mb-0">
+										<input class="btn btn-primary col-lg-9" type="submit" value="Agregar">
+										<a class="col-md-2"></a>
+										<a class="btn btn-danger col-md-2 align-rigth" href="/TPrestamo"> Cancelar </a>
+									</div>
+								</form>
+							</div>
+							<div class="card-footer text-center">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+{%endblock%}
